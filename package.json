@@ -21,7 +21,7 @@
     "i18next": "^24.0.0",
     "i18next-fs-backend": "^2.3.1",
     "prisma": "^5.9.1",
-    "undici": "^6.6.2",
+    "undici": "^7.0.0",
     "util": "^0.12.5",
     "vulkava": "^1.6.2",
     "winston": "^3.8.1"
