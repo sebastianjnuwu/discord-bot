@@ -14,13 +14,13 @@
     "check": "tsc --noEmit"
   },
   "dependencies": {
-    "@prisma/client": "^5.9.1",
+    "@prisma/client": "^6.0.0",
     "child_process": "^1.0.2",
     "colors": "^1.4.0",
     "discord.js": "^14.14.1",
     "i18next": "^24.0.0",
     "i18next-fs-backend": "^2.3.1",
-    "prisma": "^5.9.1",
+    "prisma": "^6.0.0",
     "undici": "^7.0.0",
     "util": "^0.12.5",
     "vulkava": "^1.6.2",
