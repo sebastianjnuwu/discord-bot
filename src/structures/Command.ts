@@ -12,7 +12,6 @@ interface ExecuteOptions {
 export type CommandType = {
 	exec: (opts: ExecuteOptions) => Awaitable<any>;
 	owner?: boolean;
-	player?: boolean;
 	dm_permission?: boolean;
   description_localizations?: { [key: string]: string };
 } & ChatInputApplicationCommandData;

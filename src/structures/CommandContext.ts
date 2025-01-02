@@ -31,16 +31,16 @@ export default class CommandContext {
 		if (this.interaction instanceof ChatInputCommandInteraction) {
 			if (this.interaction.replied) {
 				return this.interaction.followUp(
-					Object.assign(opts, { fetchReply: true }) as InteractionReplyOptions,
+					Object.assign(opts, { withResponse: true }) as InteractionReplyOptions,
 				);
 			}
 			if (this.interaction.deferred) {
 				return this.interaction.editReply(
-					Object.assign(opts, { fetchReply: true }) as InteractionReplyOptions,
+					Object.assign(opts, { withResponse: true }) as InteractionReplyOptions,
 				);
 			}
 			return this.interaction.reply(
-				Object.assign(opts, { fetchReply: true }) as InteractionReplyOptions,
+				Object.assign(opts, { withResponse: true }) as InteractionReplyOptions,
 			);
 		}
 		if (this.interaction instanceof Message) {

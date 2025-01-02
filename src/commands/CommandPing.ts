@@ -1,4 +1,3 @@
-import { Time } from "../functions/time";
 import { Command } from "../structures/Command";
 
 export default new Command({
@@ -12,7 +11,7 @@ export default new Command({
 		context.reply({
 			content: `**🏓 Pong!\n🛰️ Api - __${
 				client.ws.ping
-			}__ms\n⏱️ Uptime - __${Time(client.uptime)}__**`,
+			}__ms`,
 		});
 	},
 });

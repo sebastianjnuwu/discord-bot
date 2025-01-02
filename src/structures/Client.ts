@@ -18,18 +18,11 @@ import i18next from 'i18next';
 import i18nbackend from 'i18next-fs-backend';
 import { readdirSync } from 'node:fs';
 import { Event } from "./Event";
-import { Nodes } from '../Nodes';
-import { Manager } from './Music';
-import { 
-  createLogger, Logger
-} from "./Logger";
 
 export class KellyWorld extends Client { 
   
 	public commands: Collection<string, CommandType>;
 	public owner: string[];
-	public logger: Logger;
-	public manager: Manager;
 	public db: PrismaClient;
 
 	constructor() {
@@ -69,17 +62,12 @@ export class KellyWorld extends Client {
 		});
 		this.commands = new Collection();
 		this.db = new PrismaClient();
-		this.manager = new Manager(this, Nodes);
 		this.owner = ["932678185970192404"];
 	}
 
 	async init() {
-	  this.logger = createLogger({
-	    handleExceptions: true,
-			handleRejections: true,
-		}, this);
 		this.register();
-		await this.login(process.env.DISCORD_TOKEN);
+		await this.login(process.env.DISCORD_TOKEN); // token
 	};
 
 	async register() {
@@ -110,8 +98,6 @@ export class KellyWorld extends Client {
 	  }
   };
 
-    this.logger.info(`Loaded ${commandFiles.length} commands successfully!`, { tags: ['Commands'] });
-
     this.on('ready', () => {
       this.application.commands.set(slashCommands);
     });
@@ -141,10 +127,7 @@ export class KellyWorld extends Client {
       
     };
   };
-   
-   this.logger.info(`Loaded ${eventFiles.length} events successfully!`, {
-			tags: ["Events"],
-		});
+  
 		
 	};
 	
@@ -171,5 +154,5 @@ export class KellyWorld extends Client {
 	async importFile(file: string) {
 		return (await import(file))?.default;
 	};
-	
+
 };
