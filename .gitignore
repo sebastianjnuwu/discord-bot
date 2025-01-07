@@ -1,5 +1,6 @@
 # ignoring useless files 
 package-lock.json
-node_modules
-logs
+node_modules/
+build/
+logs/
 .env

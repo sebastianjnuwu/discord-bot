@@ -1,6 +1,6 @@
-import { KellyWorld } from "./structures/Client";
+import { SoulKitten } from "./structures/Client";
 
-const Client = new KellyWorld();
+const Client = new SoulKitten();
 Client.init();
 
 export default Client;
