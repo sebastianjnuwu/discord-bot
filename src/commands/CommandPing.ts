@@ -9,7 +9,7 @@ export default new Command({
 	dm_permission: false,
 	exec({ context, client }) {
 		context.reply({
-			content: `**🏓 Pong!\n🛰️ Api - __${
+			content: `**🏓 Pong!**\n🛰️ Api - __${
 				client.ws.ping
 			}__ms`,
 		});
