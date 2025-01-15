@@ -76,7 +76,7 @@ export class SoulKitten extends Client {
 
   async loadDatabase() {
     try {
-      this.db.$connect();
+      // this.db.$connect();
     } catch (err) {}
   }
 
